@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mubarak | Portfolio</title>
+    <title>Mubarak Khaled | Cybersecurity & Penetration Testing</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
@@ -13,10 +13,10 @@
     <header>
         <div class="container">
             <nav>
-                <div class="logo">Mubarak</div>
+                <div class="logo">Mubarak<span style="color:#fff;">.sec</span></div>
                 <ul class="nav-links">
                     <li><a href="#about">About</a></li>
-                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#skills">Skills & Tools</a></li>
                     <li><a href="#projects">Projects</a></li>
                     <li><a href="#experience">Experience</a></li>
                     <li><a href="#contact">Contact</a></li>
@@ -27,17 +27,16 @@
                 <div class="hero-text">
                     <p class="greeting">Hello, I'm</p>
                     <h1>Mubarak Khaled</h1>
-                    <h2>Information Engineering Student | Front-End Developer</h2>
-                    <p class="location">Based in Syria – Available for Remote and Freelance work.</p>
-                    <p class="description">Building high-quality websites with a strong focus on design, performance, and user experience.</p>
+                    <h2>Information Engineering Student | Aspiring Penetration Tester</h2>
+                    <p class="location">Based in Syria – Open to Junior Cybersecurity Roles & Remote Opportunities.</p>
+                    <p class="description">Focused on offensive security, vulnerability assessment, network traffic analysis, and building custom Python security tools.</p>
                     <div class="hero-buttons">
-                        <a href="#projects" class="btn primary">Projects</a>
+                        <a href="#projects" class="btn primary">Security Projects</a>
                         <a href="#contact" class="btn secondary">Contact Me</a>
                     </div>
                 </div>
                 <div class="hero-image">
                     <div class="image-frame">
-                        <!-- ضع رابط صورتك هنا -->
                         <img src="mubarak.jpg" alt="Mubarak">
                     </div>
                 </div>
@@ -48,21 +47,24 @@
     <!-- About Section -->
     <section id="about" class="about">
         <div class="container">
-            <h2>About</h2>
-            <p>I'm a 21-year-old Information Engineering student in my third year at Al-Wadi International University. Passionate about Front-End Development, AI, and Cybersecurity. I enjoy building clean, responsive websites and constantly improving my skills through courses and hands-on projects. Outside of coding, I practice boxing and aim to work with a tech company after graduation.</p>
+            <h2>About Me</h2>
+            <p>I'm a 22-year-old Information Engineering student in my fourth year at Al-Wadi International University, specializing in Cybersecurity with a strong focus on Penetration Testing and Red Teaming. I enjoy analyzing network packets, uncovering web vulnerabilities, and automating security tasks with Python. My background in web fundamentals (HTML/CSS) gives me a deeper understanding of how web applications work—and how to break and secure them. Outside of cybersecurity, I practice boxing and aim to join a security team after graduation.</p>
+
         </div>
     </section>
 
     <!-- Skills Section -->
     <section id="skills" class="skills">
         <div class="container">
-            <h2>Skills</h2>
+            <h2>Skills & Security Tools</h2>
             <div class="skills-grid">
-                <div class="skill-card">HTML</div>
-                <div class="skill-card">CSS</div>
+                <div class="skill-card">Penetration Testing</div>
+                <div class="skill-card">Nmap</div>
+                <div class="skill-card">Burp Suite</div>
+                <div class="skill-card">Linux / Kali</div>
+                <div class="skill-card">Python (Scapy / Requests)</div>
+                <div class="skill-card">Network Security</div>
                 <div class="skill-card">C++</div>
-                <div class="skill-card">Python</div>
-                <div class="skill-card">VS Code</div>
                 <div class="skill-card">Git & GitHub</div>
             </div>
         </div>
@@ -71,40 +73,33 @@
     <!-- Projects Section -->
     <section id="projects" class="projects">
         <div class="container">
-            <h2>Projects</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <i class="fas fa-code project-icon"></i>
-                    <h3>HTML/CSS Websites</h3>
-                    <p>Personal websites and UI designs</p>
-                </div>
-                <div class="project-card">
-                    <i class="fab fa-python project-icon"></i>
-                    <h3>Python Projects</h3>
-                    <p>Task Manager • Password Generator</p>
-                </div>
-                <div class="project-card">
-                    <i class="fas fa-store project-icon"></i>
-                    <h3>E-commerce (in progress)</h3>
-                    <p>Simple online store</p>
-                </div>
+            <h2>Security & Code Projects</h2>
+            
+            <!-- أزرار الفلترة -->
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="cyber">Cybersecurity & NIDS</button>
+                <button class="filter-btn" data-filter="python">Python Tools</button>
             </div>
+
+            <!-- هنا سيتم عرض المشاريع تلقائياً من ملف projects.js -->
+            <div class="projects-grid" id="projects-container"></div>
         </div>
     </section>
 
     <!-- Experience Section -->
     <section id="experience" class="experience">
         <div class="container">
-            <h2>Experience</h2>
+            <h2>Experience & Academic Work</h2>
             <div class="experience-card">
-                <h3>Web Development Courses</h3>
-                <p class="date">2024 – Present</p>
-                <p>Studying modern web technologies, focusing on HTML, CSS, and responsive design.</p>
+                <h3>Cybersecurity & Offensive Security Training</h3>
+                <p class="date">2025 – Present</p>
+                <p>Hands-on practice with network reconnaissance using Nmap, web application security testing with Burp Suite, and developing custom Python scripts using Scapy and Requests.</p>
             </div>
             <div class="experience-card">
-                <h3>University Projects</h3>
+                <h3>University Security & Software Projects</h3>
                 <p class="date">2023 – Present</p>
-                <p>Built multiple projects as part of coursework, including front-end designs and Python applications.</p>
+                <p>Co-developing an AI-powered Network Intrusion Detection System (NIDS) focusing on traffic capture and threat analysis, alongside coursework projects in C++ and Python.</p>
             </div>
         </div>
     </section>
@@ -113,7 +108,7 @@
     <section id="contact" class="contact">
         <div class="container">
             <h2>Contact Me</h2>
-            <p>If you'd like to collaborate or have an opportunity</p>
+            <p>Looking for a dedicated Junior Penetration Tester or Security Intern? Let's connect.</p>
             <a href="mailto:moparakkhaled123321@gmail.com" class="btn primary">Send an Email</a>
         </div>
     </section>
@@ -123,7 +118,7 @@
         <p>© 2026 Mubarak Khaled. All rights reserved.</p>
        <div class="social-links">
     <!-- واتساب -->
-    <a href="https://wa.me/0982087385" target="_blank">
+    <a href="https://wa.me/963982087385" target="_blank">
         <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="واتساب" width="30" height="30">
     </a>
     
@@ -140,6 +135,9 @@
     
     </footer>
 
+
+
+    <script src="projects.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

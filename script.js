@@ -43,3 +43,45 @@ document.querySelectorAll('section').forEach(section => {
     section.style.transition = 'all 0.6s ease-out';
     observer.observe(section);
 });
+
+// Render and Filter Projects from projects.js
+const projectsContainer = document.getElementById('projects-container');
+const filterButtons = document.querySelectorAll('.filter-btn');
+
+function displayProjects(filter = 'all') {
+    projectsContainer.innerHTML = '';
+    
+    const filtered = filter === 'all' 
+        ? myProjects 
+        : myProjects.filter(project => project.category === filter);
+
+    filtered.forEach(project => {
+        const linkHtml = project.link && project.link !== "#" 
+            ? `<a href="${project.link}" target="_blank" class="project-link">View Project <i class="fas fa-external-link-alt"></i></a>` 
+            : '';
+
+        const card = `
+            <div class="project-card">
+                <i class="${project.icon} project-icon"></i>
+                <h3>${project.title}</h3>
+                <p>${project.description}</p>
+                ${linkHtml}
+            </div>
+        `;
+        projectsContainer.innerHTML += card;
+    });
+}
+
+// Event listeners for filter buttons
+filterButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+        document.querySelector('.filter-btn.active').classList.remove('active');
+        btn.classList.add('active');
+        displayProjects(btn.getAttribute('data-filter'));
+    });
+});
+
+// Initial load
+if (typeof myProjects !== 'undefined') {
+    displayProjects('all');
+}
